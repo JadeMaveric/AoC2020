@@ -3,7 +3,7 @@
 
 import numpy as np
 
-with open('input-demo-2') as datafile:
+with open('input') as datafile:
     data = datafile.read()
     data = data.strip().split('\n')
     #data = [(bagtype, [(num, bagtype),...]), ...]
@@ -25,18 +25,13 @@ for row, entry in enumerate(data):
 def how_many_bags(bagnum, rec_guard):
     if rec_guard == 0:
         return 0
-    # print(rec_guard, "Checking", bagtypes[bagnum])
-    if np.all(adjmat[bagnum] == 0):
-        return 1
+    #print(rec_guard, "Checking", bagtypes[bagnum])
     ans = 0
     for bag, count in enumerate(adjmat[bagnum]):
-        ans += count * how_many_bags(bag, count)
+        ans += count + count * how_many_bags(bag, count)
 
     return ans
 
 
-total = 0
-for bag, count in enumerate(adjmat[bagtypes.index('shiny gold')]):
-    total += count * how_many_bags(bag, count)
-
+total = how_many_bags(bagtypes.index('shiny gold'), 1)
 print(total)
