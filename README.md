@@ -5,5 +5,6 @@ Most problems (so far) have been very straighforward, with a few moderately chal
 My personal goal solving these is improve how fast I can come up with solutions, without resorting to spaghetti code, or an otherwise rigid solution.
 
 So far (day 11), I havn't had to use any dependencies other than python. I've also included inputs (both the demo, and my personal one) to the questions so you test the programs yourself. I'll be uploading every solution once I've written them. And 10 hours have passed since the problem was released, I wouldn't want to tempt anyone away from the joy of solving a problem themselves.
+Should you have any questions, head over to the tab and create a new Discussion
 
 I hope you lovely Advent, and a meaningful Christmas! Cheers :D
