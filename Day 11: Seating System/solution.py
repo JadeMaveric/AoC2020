@@ -23,6 +23,10 @@ seats = np.zeros(_seats.shape)
 # print(ncount(0,0))
 # exit()
 
+"""
+I really wish I has the knowhow to vectorise this. But I'm not well versed enough to do it on the fly
+And since I'm also aiming for speed... iterative loop it was : (
+"""
 while not np.all(seats == _seats):
     seats = _seats.copy()
     for x,y in np.ndindex(width, height):
